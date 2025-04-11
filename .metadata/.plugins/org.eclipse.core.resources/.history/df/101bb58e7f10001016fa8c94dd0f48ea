@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdint.h>
+
+int main(){
+	__asm("svc, #3");
+
+	for(;;);
+}
+
+__attribute__((naked)) void SVC_Handler(void){
+	__asm("mrs r0, msp");
+	__asm("b svc_handler_c");
+}
+
+void svc_handler_c (void){
+
+}

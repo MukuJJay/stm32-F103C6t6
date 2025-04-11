@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdint.h>
+
+int main(){
+	__asm("SVC #3");
+
+	for(;;);
+}
+
+__attribute__((naked)) void SVC_Handler(void){
+	__asm("MRS R0, MSP");
+	__asm("B svc_handler_c");
+}
+
+void svc_handler_c (uint32_t* pBaseStackFrame){
+	uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+}

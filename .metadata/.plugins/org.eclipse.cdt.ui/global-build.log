@@ -1,0 +1,477 @@
+17:06:16 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'svc_handler_c':
+../Src/main.c:16:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   16 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    604	      0	   1568	   2172	    87c	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:06:45 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    604	      0	   1568	   2172	    87c	svc_number.elf
+Finished building: default.size.stdout
+ 
+17:07:28 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    604	      0	   1568	   2172	    87c	svc_number.elf
+Finished building: default.size.stdout
+ 
+17:08:18 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    604	      0	   1568	   2172	    87c	svc_number.elf
+Finished building: default.size.stdout
+ 
+17:09:50 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'svc_handler_c':
+../Src/main.c:16:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   16 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    604	      0	   1568	   2172	    87c	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:12:13 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'svc_handler_c':
+../Src/main.c:18:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   18 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+   4620	     92	   1900	   6612	   19d4	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:13:59 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:18:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   18 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+   4620	     92	   1900	   6612	   19d4	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:15:02 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+   4612	     92	   1900	   6604	   19cc	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:16:28 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+   4612	     92	   1900	   6604	   19cc	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:17:38 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4612	     92	   1900	   6604	   19cc	svc_number.elf
+Finished building: default.size.stdout
+ 
+17:21:13 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+   4612	     92	   1900	   6604	   19cc	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:21:55 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    572	      0	   1568	   2140	    85c	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:23:34 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    572	      0	   1568	   2140	    85c	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:25:39 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    572	      0	   1568	   2140	    85c	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:26:59 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    580	      0	   1568	   2148	    864	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:33:41 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   19 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    612	      0	   1568	   2180	    884	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:34:11 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    612	      0	   1568	   2180	    884	svc_number.elf
+Finished building: default.size.stdout
+ 
+17:35:41 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   19 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    612	      0	   1568	   2180	    884	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:36:15 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    612	      0	   1568	   2180	    884	svc_number.elf
+Finished building: default.size.stdout
+ 
+18:09:34 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:15:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
+   15 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
+      |                  ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    604	      0	   1568	   2172	    87c	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:17:12 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:9: error: unknown type name 'uint_8'; did you mean 'uint8_t'?
+   19 |         uint_8 svc_number = *pReturnAddress;
+      |         ^~~~~~
+      |         uint8_t
+../Src/main.c:19:16: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint_8 svc_number = *pReturnAddress;
+      |                ^~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:17:52 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+C:\Users\Gin\AppData\Local\Temp\ccuY5Y1j.s: Assembler messages:
+C:\Users\Gin\AppData\Local\Temp\ccuY5Y1j.s:120: Error: undefined symbol svc_number used as an immediate value
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:18:37 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:20:44 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:22:02 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:17:24: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   17 |         pReturnAddress =- 2;
+      |                        ^
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:22:34 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:24:55 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:27:26 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:9: error: expected declaration or statement at end of input
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |         ^~~~~~~
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:27:38 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint8_t svc_number = *pReturnAddress;
+      |                 ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+18:28:22 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+18:29:02 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-size  svc_number.elf 
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+18:32:56 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_c':
+../Src/main.c:19:18: warning: unused variable 'svc_number' [-Wunused-variable]
+   19 |         uint16_t svc_number = *pReturnAddress;
+      |                  ^~~~~~~~~~
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    616	      0	   1568	   2184	    888	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+17:09:06 **** Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:7:52: error: expected string literal before 'r0'
+    7 |         __asm volatile("MOV %0,r0" : "=r"(data) :: r0);
+      |                                                    ^~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:09:28 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:7:52: error: expected string literal before 'r0'
+    7 |         __asm volatile("MOV %0,r0" : "=r"(data) :: r0);
+      |                                                    ^~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+17:10:14 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    632	      0	   1568	   2200	    898	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 

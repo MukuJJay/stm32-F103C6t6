@@ -1,0 +1,17 @@
+17:10:14 **** Incremental Build of configuration Debug for project svc_number ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: svc_number.elf
+ 
+arm-none-eabi-size  svc_number.elf 
+arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+   text	   data	    bss	    dec	    hex	filename
+    632	      0	   1568	   2200	    898	svc_number.elf
+Finished building: default.size.stdout
+ 
+Finished building: svc_number.list
+ 
+
+17:10:14 Build Finished. 0 errors, 0 warnings. (took 895ms)
+
