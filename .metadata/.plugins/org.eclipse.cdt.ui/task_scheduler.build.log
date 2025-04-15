@@ -1,0 +1,17 @@
+13:03:52 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+
+13:03:53 Build Finished. 0 errors, 0 warnings. (took 335ms)
+

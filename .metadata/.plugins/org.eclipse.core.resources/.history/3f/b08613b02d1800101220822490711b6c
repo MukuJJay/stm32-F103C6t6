@@ -1,0 +1,199 @@
+#include <stdint.h>
+#include "main.h"
+#include "led.h"
+
+void task1_handler(void);
+void task2_handler(void);
+void task3_handler(void);
+void task4_handler(void);
+
+void systick_timer_init(uint32_t tick_hz);
+__attribute__((naked)) void sched_stack_init(uint32_t top_of_stack_memory);
+void demo_task_stacks_init(void);
+uint32_t get_psp_value(void);
+__attribute__((naked)) void sp_to_psp(void);
+void save_psp_value (uint32_t current_psp_value);
+void update_next_task(void);
+
+void enable_processor_faults(void);
+
+
+uint32_t psp_of_tasks[MAX_TASKS] = {T1_STACK_START, T2_STACK_START, T3_STACK_START, T4_STACK_START};
+uint32_t task_handlers[MAX_TASKS];
+uint32_t currentTask = 0;
+
+int main(void)
+{
+	enable_processor_faults();
+
+	sched_stack_init(SCHED_STACK_START);
+
+	task_handlers[0] = (uint32_t) task1_handler;
+	task_handlers[1] = (uint32_t) task2_handler;
+	task_handlers[2] = (uint32_t) task3_handler;
+	task_handlers[3] = (uint32_t) task4_handler;
+
+	demo_task_stacks_init();
+
+	led_init_all();
+
+	systick_timer_init(TICK_HZ);
+
+	sp_to_psp();
+
+	task1_handler();
+    /* Loop forever */
+	for(;;);
+}
+
+void task1_handler(void){
+	while(1){
+		led_on(LED1);
+		delay(DELAY_COUNT_1S);
+		led_off(LED1);
+		delay(DELAY_COUNT_1S);
+	}
+}
+
+void task2_handler(void){
+	while(1){
+		led_on(LED2);
+		delay(DELAY_COUNT_500MS);
+		led_off(LED1);
+		delay(DELAY_COUNT_500MS);
+	}
+}
+
+void task3_handler(void){
+	while(1){
+		led_on(LED3);
+		delay(DELAY_COUNT_250MS);
+		led_off(LED3);
+		delay(DELAY_COUNT_250MS);
+	}
+}
+
+void task4_handler(void){
+	while(1){
+		led_on(LED4);
+		delay(DELAY_COUNT_125MS);
+		led_off(LED4);
+		delay(DELAY_COUNT_125MS);
+	}
+}
+
+void enable_processor_faults(void)
+{
+	uint32_t *pSHCSR = (uint32_t*)0xE000ED24;
+
+	*pSHCSR |= ( 1 << 16); //mem manage
+	*pSHCSR |= ( 1 << 17); //bus fault
+	*pSHCSR |= ( 1 << 18); //usage fault
+}
+
+void systick_timer_init(uint32_t tick_hz){
+	uint32_t* pSYST_CSR= (uint32_t*) 0xE000E010;
+	uint32_t* pSYST_RVR = (uint32_t*) 0xE000E014;
+
+	uint32_t count = (SYSTICK_TIM_CLK / TICK_HZ) - 1;
+
+	*pSYST_RVR &= ~(0x00FFFFFF); // clearing 0 to 23 bits
+	*pSYST_RVR |= count; //load the count value
+
+	*pSYST_CSR |= (1 << 1); // enabling SysTick exception request
+	*pSYST_CSR |= (1 << 2); // using processor internal clock
+	*pSYST_CSR |= (1 << 0); // enabling the counter
+
+}
+
+__attribute__((naked)) void sched_stack_init(uint32_t top_of_stack_memory){
+	__asm volatile ("MSR MSP, R0");
+	__asm volatile ("BX LR");
+}
+
+void demo_task_stacks_init(void){
+	uint32_t *psp;
+
+	for(int i = 0; i < MAX_TASKS; i++){
+		psp = (uint32_t*) psp_of_tasks[i];
+
+		psp--; //XPSR
+		*psp = DUMMY_XPSR;
+
+		psp--; //PC
+		*psp = task_handlers[i];
+
+		psp--; //LR
+		*psp = 0xFFFFFFFD;
+
+		for(int j = 0; j < 13; j++){
+			psp--;
+			*psp = 0;
+		}
+
+		psp_of_tasks[i] = (uint32_t)psp;
+	}
+}
+
+uint32_t get_psp_value(void){
+	return psp_of_tasks[currentTask];
+}
+
+void save_psp_value (uint32_t current_psp_value){
+	psp_of_tasks[currentTask] = current_psp_value;
+}
+
+void update_next_task(void){
+	currentTask++;
+	currentTask %= MAX_TASKS;
+}
+
+__attribute__((naked)) void sp_to_psp(void){
+	//getting the psp value
+	__asm volatile ("PUSH {LR}");
+	__asm volatile ("BL get_psp_value");
+	__asm volatile ("MSR PSP, R0");
+	__asm volatile ("POP {LR}");
+
+	//switching to psp
+	__asm volatile ("MRS R0, CONTROL");
+	__asm volatile ("ORR R0, R0, #2");
+	__asm volatile ("MSR CONTROL, R0");
+
+	__asm volatile ("BX LR");
+
+}
+
+__attribute__((naked)) void SysTick_Handler(void){
+	//storing the current task context
+	__asm volatile ("MRS R0, PSP");
+	__asm volatile ("STMDB R0!, {R4-R11}");
+	__asm volatile ("PUSH {LR}");
+	__asm volatile ("BL save_psp_value");
+
+	//switching to the next task
+	__asm volatile ("BL update_next_task");
+	__asm volatile ("BL get_psp_value");
+	__asm volatile ("LDMIA R0!, {R4-R11}");
+	__asm volatile ("MSR PSP, R0");
+	__asm volatile ("POP {LR}");
+	__asm volatile ("BX LR");
+}
+
+
+//2. implement the fault handlers
+void HardFault_Handler(void)
+{
+	while(1);
+}
+
+
+void MemManage_Handler(void)
+{
+	while(1);
+}
+
+void BusFault_Handler(void)
+{
+	while(1);
+}

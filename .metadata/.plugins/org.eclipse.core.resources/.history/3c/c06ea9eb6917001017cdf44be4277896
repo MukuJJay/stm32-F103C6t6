@@ -1,0 +1,80 @@
+#include <stdint.h>
+
+void task1_handler(void);
+void task2_handler(void);
+void task3_handler(void);
+void task4_handler(void);
+
+void systick_timer_init(uint32_t tick_hz);
+__attribute__((naked)) void sched_stack_init(uint32_t top_of_stack_memory);
+void demo_task_stacks_init(void);
+
+/* Some memory calculations macros */
+#define SIZE_TASK_STACK 1024U
+#define SIZE_SCHED_STACK 1024U
+
+#define SRAM_START 0x20000000U
+#define SIZE_SRAM ((10) * (1024))
+#define SRAM_END ((SRAM_START) + (SIZE_SRAM))
+
+#define T1_STACK_START SRAM_END
+#define T2_STACK_START ((SRAM_END) - (SIZE_TASK_STACK))
+#define T3_STACK_START ((SRAM_END) - (2 * SIZE_TASK_STACK))
+#define T4_STACK_START ((SRAM_END) - (3 * SIZE_TASK_STACK))
+#define SCHED_STACK_START ((SRAM_END) - (4 * SIZE_TASK_STACK))
+
+/* some other macros */
+#define TICK_HZ 1000U
+#define HSI_CLK 8000000U
+#define SYSTICK_TIM_CLK HSI_CLK
+
+
+
+int main(void)
+{
+	sched_stack_init(SCHED_STACK_START);
+
+	systick_timer_init(TICK_HZ);
+    /* Loop forever */
+	for(;;);
+}
+
+void task1_handler(void){
+	while(1);
+}
+
+void task2_handler(void){
+	while(1);
+}
+
+void task3_handler(void){
+	while(1);
+}
+
+void task4_handler(void){
+	while(1);
+}
+
+void systick_timer_init(uint32_t tick_hz){
+	uint32_t* pSYST_CSR= (uint32_t*) 0xE000E010;
+	uint32_t* pSYST_RVR = (uint32_t*) 0xE000E014;
+
+	uint32_t count = (SYSTICK_TIM_CLK / TICK_HZ) - 1;
+
+	*pSYST_RVR &= ~(0x00FFFFFF); // clearing 0 to 23 bits
+	*pSYST_RVR |= count; //load the count value
+
+	*pSYST_CSR |= (1 << 1); // enabling SysTick exception request
+	*pSYST_CSR |= (1 << 2); // using processor internal clock
+	*pSYST_CSR |= (1 << 0); // enabling the counter
+
+}
+
+__attribute__((naked)) void sched_stack_init(uint32_t top_of_stack_memory){
+	__asm volatile ("MSR MSP, R0");
+	__asm volatile ("BX LR");
+}
+
+void SysTick_Handler(void){
+
+}

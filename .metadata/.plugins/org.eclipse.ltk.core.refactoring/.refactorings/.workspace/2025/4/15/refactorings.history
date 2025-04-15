@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;task_scheduler/Inc/main&apos;" deleteContents="false" description="Delete resource &apos;task_scheduler/Inc/main&apos;" element1="/task_scheduler/Inc/main" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1744440683023"/>
+</session>

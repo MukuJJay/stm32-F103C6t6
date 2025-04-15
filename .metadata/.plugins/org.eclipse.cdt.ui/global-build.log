@@ -1,477 +1,537 @@
-17:06:16 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'svc_handler_c':
-../Src/main.c:16:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   16 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    604	      0	   1568	   2172	    87c	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:06:45 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    604	      0	   1568	   2172	    87c	svc_number.elf
-Finished building: default.size.stdout
- 
-17:07:28 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    604	      0	   1568	   2172	    87c	svc_number.elf
-Finished building: default.size.stdout
- 
-17:08:18 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    604	      0	   1568	   2172	    87c	svc_number.elf
-Finished building: default.size.stdout
- 
-17:09:50 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'svc_handler_c':
-../Src/main.c:16:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   16 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    604	      0	   1568	   2172	    87c	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:12:13 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'svc_handler_c':
-../Src/main.c:18:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   18 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-   4620	     92	   1900	   6612	   19d4	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:13:59 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:18:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   18 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-   4620	     92	   1900	   6612	   19d4	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:15:02 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-   4612	     92	   1900	   6604	   19cc	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:16:28 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-   4612	     92	   1900	   6604	   19cc	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:17:38 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4612	     92	   1900	   6604	   19cc	svc_number.elf
-Finished building: default.size.stdout
- 
-17:21:13 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-   4612	     92	   1900	   6604	   19cc	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:21:55 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    572	      0	   1568	   2140	    85c	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:23:34 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    572	      0	   1568	   2140	    85c	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:25:39 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    572	      0	   1568	   2140	    85c	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:26:59 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    580	      0	   1568	   2148	    864	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:33:41 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   19 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    612	      0	   1568	   2180	    884	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:34:11 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    612	      0	   1568	   2180	    884	svc_number.elf
-Finished building: default.size.stdout
- 
-17:35:41 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   19 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    612	      0	   1568	   2180	    884	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:36:15 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    612	      0	   1568	   2180	    884	svc_number.elf
-Finished building: default.size.stdout
- 
-18:09:34 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:15:18: warning: unused variable 'pReturnAddress' [-Wunused-variable]
-   15 |         uint8_t* pReturnAddress = (uint8_t*) pBaseStackFrame[6];
-      |                  ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    604	      0	   1568	   2172	    87c	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:17:12 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:9: error: unknown type name 'uint_8'; did you mean 'uint8_t'?
-   19 |         uint_8 svc_number = *pReturnAddress;
-      |         ^~~~~~
-      |         uint8_t
-../Src/main.c:19:16: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint_8 svc_number = *pReturnAddress;
-      |                ^~~~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-18:17:52 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-C:\Users\Gin\AppData\Local\Temp\ccuY5Y1j.s: Assembler messages:
-C:\Users\Gin\AppData\Local\Temp\ccuY5Y1j.s:120: Error: undefined symbol svc_number used as an immediate value
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-18:18:37 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:20:44 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:22:02 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:17:24: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   17 |         pReturnAddress =- 2;
-      |                        ^
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:22:34 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:24:55 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:27:26 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:9: error: expected declaration or statement at end of input
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |         ^~~~~~~
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-18:27:38 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:17: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint8_t svc_number = *pReturnAddress;
-      |                 ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-18:28:22 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-18:29:02 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-size  svc_number.elf 
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-18:32:56 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SVC_Handler_c':
-../Src/main.c:19:18: warning: unused variable 'svc_number' [-Wunused-variable]
-   19 |         uint16_t svc_number = *pReturnAddress;
-      |                  ^~~~~~~~~~
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
- 
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
-   text	   data	    bss	    dec	    hex	filename
-    616	      0	   1568	   2184	    888	svc_number.elf
-Finished building: default.size.stdout
- 
-Finished building: svc_number.list
- 
-17:09:06 **** Build of configuration Debug for project svc_number ****
+07:12:39 **** Incremental Build of configuration Debug for project task_scheduler ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 ../Src/main.c: In function 'main':
-../Src/main.c:7:52: error: expected string literal before 'r0'
-    7 |         __asm volatile("MOV %0,r0" : "=r"(data) :: r0);
-      |                                                    ^~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-17:09:28 **** Incremental Build of configuration Debug for project svc_number ****
+../Src/main.c:41:18: warning: unused variable 'hello' [-Wunused-variable]
+   41 |         uint32_t hello = 4;
+      |                  ^~~~~
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1192	     16	   1584	   2792	    ae8	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+07:12:52 **** Incremental Build of configuration Debug for project task_scheduler ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 ../Src/main.c: In function 'main':
-../Src/main.c:7:52: error: expected string literal before 'r0'
-    7 |         __asm volatile("MOV %0,r0" : "=r"(data) :: r0);
-      |                                                    ^~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-17:10:14 **** Incremental Build of configuration Debug for project svc_number ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "svc_number.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\svc_number\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="svc_number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: svc_number.elf
+../Src/main.c:41:13: warning: unused variable 'hello' [-Wunused-variable]
+   41 |         int hello = 4;
+      |             ^~~~~
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
  
-arm-none-eabi-size  svc_number.elf 
-arm-none-eabi-objdump -h -S svc_number.elf  > "svc_number.list"
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
    text	   data	    bss	    dec	    hex	filename
-    632	      0	   1568	   2200	    898	svc_number.elf
+   1192	     16	   1584	   2792	    ae8	task_scheduler.elf
 Finished building: default.size.stdout
  
-Finished building: svc_number.list
+Finished building: task_scheduler.list
+ 
+07:13:43 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:47:13: warning: unused variable 'hellooooooo' [-Wunused-variable]
+   47 |         int hellooooooo = 4;
+      |             ^~~~~~~~~~~
+../Src/main.c:46:13: warning: unused variable 'helloooooo' [-Wunused-variable]
+   46 |         int helloooooo = 4;
+      |             ^~~~~~~~~~
+../Src/main.c:45:13: warning: unused variable 'hellooooo' [-Wunused-variable]
+   45 |         int hellooooo = 4;
+      |             ^~~~~~~~~
+../Src/main.c:44:13: warning: unused variable 'helloooo' [-Wunused-variable]
+   44 |         int helloooo = 4;
+      |             ^~~~~~~~
+../Src/main.c:43:13: warning: unused variable 'hellooo' [-Wunused-variable]
+   43 |         int hellooo = 4;
+      |             ^~~~~~~
+../Src/main.c:42:13: warning: unused variable 'helloo' [-Wunused-variable]
+   42 |         int helloo = 4;
+      |             ^~~~~~
+../Src/main.c:41:13: warning: unused variable 'hello' [-Wunused-variable]
+   41 |         int hello = 4;
+      |             ^~~~~
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	     16	   1584	   2816	    b00	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+07:14:59 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:47:13: warning: unused variable 'hellooooooo' [-Wunused-variable]
+   47 |         int hellooooooo = 4;
+      |             ^~~~~~~~~~~
+../Src/main.c:46:13: warning: unused variable 'helloooooo' [-Wunused-variable]
+   46 |         int helloooooo = 4;
+      |             ^~~~~~~~~~
+../Src/main.c:45:13: warning: unused variable 'hellooooo' [-Wunused-variable]
+   45 |         int hellooooo = 4;
+      |             ^~~~~~~~~
+../Src/main.c:44:13: warning: unused variable 'helloooo' [-Wunused-variable]
+   44 |         int helloooo = 4;
+      |             ^~~~~~~~
+../Src/main.c:43:13: warning: unused variable 'hellooo' [-Wunused-variable]
+   43 |         int hellooo = 4;
+      |             ^~~~~~~
+../Src/main.c:42:13: warning: unused variable 'helloo' [-Wunused-variable]
+   42 |         int helloo = 4;
+      |             ^~~~~~
+../Src/main.c:41:13: warning: unused variable 'hello' [-Wunused-variable]
+   41 |         int hello = 4;
+      |             ^~~~~
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1220	     16	   1584	   2820	    b04	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+07:15:46 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1196	     16	   1584	   2796	    aec	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+07:16:10 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1196	     16	   1584	   2796	    aec	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+07:16:50 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1208	     16	   1584	   2808	    af8	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+07:17:54 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1208	     16	   1584	   2808	    af8	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+07:18:24 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1208	     16	   1584	   2808	    af8	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+07:19:41 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1208	     16	   1584	   2808	    af8	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+07:25:51 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1188	     16	   1584	   2788	    ae4	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:17:35 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/lec.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/lec.d" -MT"Src/lec.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/lec.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:18:29 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1572	     16	   1584	   3172	    c64	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:19:14 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1352	     16	   1584	   2952	    b88	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:19:57 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1516	     16	   1584	   3116	    c2c	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:24:45 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/lec.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/lec.d" -MT"Src/lec.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/lec.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1516	     16	   1584	   3116	    c2c	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:27:11 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1516	     16	   1584	   3116	    c2c	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+11:29:23 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/lec.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/lec.d" -MT"Src/lec.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/lec.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1516	     16	   1584	   3116	    c2c	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:32:18 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/lec.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/lec.d" -MT"Src/lec.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/lec.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1516	     16	   1584	   3116	    c2c	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:35:35 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1516	     16	   1584	   3116	    c2c	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+11:36:16 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:36:32 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+11:37:05 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:38:41 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:39:16 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:40:17 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-size  task_scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+11:47:22 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/lec.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/lec.d" -MT"Src/lec.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/lec.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:55:35 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+11:59:42 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+12:33:17 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+12:37:31 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1632	     16	   1584	   3232	    ca0	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+12:40:08 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/led.c: In function 'led_init_all':
+../Src/led.c:30:30: warning: left shift count >= width of type [-Wshift-count-overflow]
+   30 |         *pGpioBMode &= ~(0xF << 4 * LED4);
+      |                              ^~
+../Src/led.c:31:30: warning: left shift count >= width of type [-Wshift-count-overflow]
+   31 |         *pGpioBMode |= ( 0x1 << (4 * LED4));
+      |                              ^~
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1592	     16	   1584	   3192	    c78	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+12:41:59 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+../Src/led.c: In function 'led_init_all':
+../Src/led.c:36:30: warning: left shift count >= width of type [-Wshift-count-overflow]
+   36 |         *pGpioBMode &= ~(0xF << 4 * LED4);
+      |                              ^~
+../Src/led.c:37:30: warning: left shift count >= width of type [-Wshift-count-overflow]
+   37 |         *pGpioBMode |= ( 0x1 << (4 * LED4));
+      |                              ^~
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1624	     16	   1584	   3224	    c98	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+12:42:39 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1632	     16	   1584	   3232	    ca0	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+12:51:23 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1632	     16	   1584	   3232	    ca0	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+13:02:47 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/led.d" -MT"Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/led.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
+ 
+13:03:52 **** Incremental Build of configuration Debug for project task_scheduler ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "task_scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Gin\STM32CubeIDE\workspace_1.17.0\task_scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="task_scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: task_scheduler.elf
+ 
+arm-none-eabi-size  task_scheduler.elf 
+arm-none-eabi-objdump -h -S task_scheduler.elf  > "task_scheduler.list"
+   text	   data	    bss	    dec	    hex	filename
+   1600	     16	   1584	   3200	    c80	task_scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: task_scheduler.list
  
