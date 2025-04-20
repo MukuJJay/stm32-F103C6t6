@@ -1,0 +1,54 @@
+#include <stdint.h>
+#include "led.h"
+
+void delay(uint32_t count)
+{
+    for (uint32_t i = 0; i < count; i++);
+}
+
+void led_init_all(void)
+{
+    /* Enable clock for GPIOD (AHB1ENR bit 3) */
+    volatile uint32_t *pRccAhb1enr   = (uint32_t *)0x40023830;
+    volatile uint32_t *pGpiodModeReg = (uint32_t *)0x40020C00;
+
+    *pRccAhb1enr |= (1U << 3);
+
+    /* Configure PD12 (LED1), PD13 (LED2), PD14 (LED3), PD15 (LED4) as outputs */
+    *pGpiodModeReg &= ~((0x3U << (2 * LED1))  \
+                      | (0x3U << (2 * LED2)) \
+                      | (0x3U << (2 * LED3))    \
+                      | (0x3U << (2 * LED4)));
+
+    *pGpiodModeReg |=  ((1U << (2 * LED1))  \
+                      | (1U << (2 * LED2)) \
+                      | (1U << (2 * LED3))    \
+                      | (1U << (2 * LED4)));
+
+#if 0
+    /* Optionally configure output type (OTYPER) to push-pull if needed */
+    volatile uint32_t *pGpioOpTypeReg = (uint32_t *)0x40020C04;
+    *pGpioOpTypeReg &= ~((1U << LED1)
+                        | (1U << LED2)
+                        | (1U << LED3)
+                        | (1U << LED4));
+#endif
+
+    /* Ensure all LEDs are off at startup */
+    led_off(LED1);
+    led_off(LED2);
+    led_off(LED3);
+    led_off(LED4);
+}
+
+void led_on(uint8_t led_no)
+{
+    volatile uint32_t *pGpiodDataReg = (uint32_t *)0x40020C14;
+    *pGpiodDataReg |= (1U << led_no);
+}
+
+void led_off(uint8_t led_no)
+{
+    volatile uint32_t *pGpiodDataReg = (uint32_t *)0x40020C14;
+    *pGpiodDataReg &= ~(1U << led_no);
+}

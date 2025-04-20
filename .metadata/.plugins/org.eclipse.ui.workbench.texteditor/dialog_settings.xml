@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="pRccAhb1enr"/>
+		<item key="selection" value="LED4"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="LED_BLUE"/>
+			<item value="LED_RED"/>
+			<item value="LED_ORANGE"/>
+			<item value="LED_GREEN"/>
+			<item value="SysTick_Handler"/>
+			<item value="update_next_task"/>
+			<item value="task_delay"/>
+			<item value="unblock_tasks"/>
+			<item value="tick_hz"/>
+			<item value="TASK_READY_STATE"/>
+			<item value="TASK_RUNNING"/>
+			<item value="TASK_BLOCKED_STATE"/>
+			<item value="psp_of"/>
 			<item value="pRccAhb1enr"/>
 			<item value="huart1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="LED4"/>
+			<item value="LED3"/>
+			<item value="LED2"/>
+			<item value="LED1"/>
+			<item value="TASK_READY"/>
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="807"/>
-		<item key="DIALOG_Y_ORIGIN" value="264"/>
+		<item key="DIALOG_X_ORIGIN" value="924"/>
+		<item key="DIALOG_Y_ORIGIN" value="328"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
