@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="LED4"/>
+		<item key="selection" value="pRccAhb1enr"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="pRccApb2enr"/>
+			<item value="pGpioBMode"/>
+			<item value="0xE000ED04"/>
+			<item value="Reset_Handler"/>
+			<item value="PendSV_Handler"/>
 			<item value="LED_BLUE"/>
 			<item value="LED_RED"/>
 			<item value="LED_ORANGE"/>
@@ -18,13 +23,10 @@
 			<item value="unblock_tasks"/>
 			<item value="tick_hz"/>
 			<item value="TASK_READY_STATE"/>
-			<item value="TASK_RUNNING"/>
-			<item value="TASK_BLOCKED_STATE"/>
-			<item value="psp_of"/>
-			<item value="pRccAhb1enr"/>
-			<item value="huart1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="pRccAhb1enr"/>
+			<item value="pGpioAMode"/>
 			<item value="LED4"/>
 			<item value="LED3"/>
 			<item value="LED2"/>

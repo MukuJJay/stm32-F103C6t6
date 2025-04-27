@@ -26,7 +26,7 @@ void schedule(void);
 
 
 
-uint32_t currentTask = 0;
+uint32_t currentTask = 1;
 uint32_t g_tick_count = 0;
 
 typedef struct{
@@ -52,8 +52,8 @@ int main(void)
 
 	sp_to_psp();
 
-//	task1_handler();
-	schedule();
+	task1_handler();
+//	schedule();
     /* Loop forever */
 	for(;;);
 }

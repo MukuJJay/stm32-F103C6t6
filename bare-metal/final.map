@@ -1,0 +1,176 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00040000         xr
+SRAM             0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD main.o
+LOAD led.o
+LOAD stm32F401CC_startup.o
+
+.text           0x08000000      0x798
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x120 stm32F401CC_startup.o
+                0x08000000                vectors
+ *(.text)
+ .text          0x08000120      0x4e4 main.o
+                0x08000120                main
+                0x08000150                idle_task
+                0x08000158                task1_handler
+                0x0800017c                task2_handler
+                0x080001a0                task3_handler
+                0x080001c0                task4_handler
+                0x080001e0                enable_processor_faults
+                0x0800021c                systick_timer_init
+                0x0800028c                sched_stack_init
+                0x08000294                task_stacks_init
+                0x080003ac                sp_to_psp
+                0x080003ca                get_psp_value
+                0x080003ec                save_psp_value
+                0x08000414                update_next_task
+                0x08000498                PendSV_Handler
+                0x080004be                schedule
+                0x080004e4                task_delay
+                0x08000544                update_global_tick_count
+                0x08000560                unblock_tasks
+                0x080005c0                SysTick_Handler
+                0x080005ec                HardFault_Handler
+                0x080005f4                MemManage_Handler
+                0x080005fc                BusFault_Handler
+ .text          0x08000604      0x104 led.o
+                0x08000604                delay
+                0x0800062c                led_init_all
+                0x080006a8                led_on
+                0x080006d8                led_off
+ .text          0x08000708       0x90 stm32F401CC_startup.o
+                0x08000708                EXTI2_IRQHandler
+                0x08000708                SVCall_Handler
+                0x08000708                SPI4_IRQHandler
+                0x08000708                TIM1_CC_IRQHandler
+                0x08000708                DMA2_Stream5_IRQHandler
+                0x08000708                DMA1_Stream5_IRQHandler
+                0x08000708                PVD_IRQHandler
+                0x08000708                SDIO_IRQHandler
+                0x08000708                TAMP_STAMP_IRQHandler
+                0x08000708                NMI_Handler
+                0x08000708                EXTI3_IRQHandler
+                0x08000708                TIM1_UP_TIM10_IRQHandler
+                0x08000708                I2C3_ER_IRQHandler
+                0x08000708                EXTI18_OTG_FS_WKUP_IRQHandler
+                0x08000708                EXTI0_IRQHandler
+                0x08000708                I2C2_EV_IRQHandler
+                0x08000708                DMA1_Stream2_IRQHandler
+                0x08000708                FPU_IRQHandler
+                0x08000708                UsageFault_Handler
+                0x08000708                DMA2_Stream2_IRQHandler
+                0x08000708                SPI1_IRQHandler
+                0x08000708                TIM1_BRK_TIM9_IRQHandler
+                0x08000708                DMA2_Stream3_IRQHandler
+                0x08000708                USART6_IRQHandler
+                0x08000708                DMA2_Stream0_IRQHandler
+                0x08000708                TIM4_IRQHandler
+                0x08000708                I2C1_EV_IRQHandler
+                0x08000708                DMA1_Stream6_IRQHandler
+                0x08000708                DMA1_Stream1_IRQHandler
+                0x08000708                TIM3_IRQHandler
+                0x08000708                RCC_IRQHandler
+                0x08000708                Default_Handler
+                0x08000708                EXTI15_10_IRQHandler
+                0x08000708                ADC_IRQHandler
+                0x08000708                DMA1_Stream7_IRQHandler
+                0x08000708                TIM5_IRQHandler
+                0x08000708                DMA2_Stream7_IRQHandler
+                0x08000708                I2C3_EV_IRQHandler
+                0x08000708                EXTI9_5_IRQHandler
+                0x08000708                RTC_WKUP_IRQHandler
+                0x08000708                SPI2_IRQHandler
+                0x08000708                DMA1_Stream0_IRQHandler
+                0x08000708                EXTI4_IRQHandler
+                0x08000708                WWDG_IRQHandler
+                0x08000708                TIM2_IRQHandler
+                0x08000708                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08000708                EXTI1_IRQHandler
+                0x08000708                EXTI17_RTC_Alarm_IRQHandler
+                0x08000708                USART2_IRQHandler
+                0x08000708                I2C2_ER_IRQHandler
+                0x08000708                DMA2_Stream1_IRQHandler
+                0x08000708                FLASH_IRQHandler
+                0x08000708                DMA2_Stream4_IRQHandler
+                0x08000708                USART1_IRQHandler
+                0x08000708                OTG_FS_IRQHandler
+                0x08000708                SPI3_IRQHandler
+                0x08000708                DMA1_Stream4_IRQHandler
+                0x08000708                I2C1_ER_IRQHandler
+                0x08000708                DebugMonitor_Handler
+                0x08000708                DMA2_Stream6_IRQHandler
+                0x08000708                DMA1_Stream3_IRQHandler
+                0x08000710                Reset_Handler
+ *(.rodata)
+                0x08000798                        . = ALIGN (0x4)
+                0x08000798                        _etxt = .
+
+.glue_7         0x08000798        0x0
+ .glue_7        0x08000798        0x0 linker stubs
+
+.glue_7t        0x08000798        0x0
+ .glue_7t       0x08000798        0x0 linker stubs
+
+.vfp11_veneer   0x08000798        0x0
+ .vfp11_veneer  0x08000798        0x0 linker stubs
+
+.v4_bx          0x08000798        0x0
+ .v4_bx         0x08000798        0x0 linker stubs
+
+.iplt           0x08000798        0x0
+ .iplt          0x08000798        0x0 main.o
+
+.rel.dyn        0x08000798        0x0
+ .rel.iplt      0x08000798        0x0 main.o
+
+.data           0x20000000        0x4 load address 0x08000798
+                0x20000000                        _sdata = .
+ *(.data)
+ .data          0x20000000        0x4 main.o
+                0x20000000                currentTask
+ .data          0x20000004        0x0 led.o
+ .data          0x20000004        0x0 stm32F401CC_startup.o
+                0x20000004                        . = ALIGN (0x4)
+                0x20000004                        _edata = .
+
+.igot.plt       0x20000004        0x0 load address 0x0800079c
+ .igot.plt      0x20000004        0x0 main.o
+
+.bss            0x20000004       0x54 load address 0x0800079c
+                0x20000004                        _sbss = .
+ *(.bss)
+ .bss           0x20000004       0x54 main.o
+                0x20000004                g_tick_count
+                0x20000008                userTasks
+ .bss           0x20000058        0x0 led.o
+ .bss           0x20000058        0x0 stm32F401CC_startup.o
+ *(COMMON)
+                0x20000058                        . = ALIGN (0x4)
+                0x20000058                        _ebss = .
+OUTPUT(final.elf elf32-littlearm)
+LOAD linker stubs
+
+.comment        0x00000000       0x26
+ .comment       0x00000000       0x26 main.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026       0x27 led.o
+ .comment       0x00000026       0x27 stm32F401CC_startup.o
+
+.ARM.attributes
+                0x00000000       0x2e
+ .ARM.attributes
+                0x00000000       0x2e main.o
+ .ARM.attributes
+                0x0000002e       0x2e led.o
+ .ARM.attributes
+                0x0000005c       0x2e stm32F401CC_startup.o

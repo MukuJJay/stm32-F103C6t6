@@ -6,7 +6,7 @@
 #define SIZE_SCHED_STACK 1024U
 
 #define SRAM_START 0x20000000U
-#define SIZE_SRAM ((6) * (1024))
+#define SIZE_SRAM ((10) * (1024))
 #define SRAM_END ((SRAM_START) + (SIZE_SRAM))
 
 #define T1_STACK_START SRAM_END
@@ -29,6 +29,5 @@
 
 #define INTERRUPT_DISABLE() do{__asm volatile("MOV R0, #0x1"); __asm volatile("MSR PRIMASK, R0");}while(0)
 #define INTERRUPT_ENABLE() do{__asm volatile("MOV R0, #0x0"); __asm volatile("MSR PRIMASK, R0");}while(0)
-
 
 #endif /* MAIN_H_ */

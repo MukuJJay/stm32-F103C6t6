@@ -1,0 +1,58 @@
+#include <stdint.h>
+#include "led.h"
+
+/* === Base Addresses & Register Definitions === */
+
+/* RCC base and AHB1 peripheral clock register */
+#define RCC_BASE        0x40023800U
+#define RCC_AHB1ENR     (*(volatile uint32_t*)(RCC_BASE + 0x30U))  /* RCC AHB1 Enable Register :contentReference[oaicite:0]{index=0} */
+
+/* GPIOB base and register offsets */
+#define GPIOB_BASE      0x40020400U                                    /* GPIOB peripheral boundary :contentReference[oaicite:1]{index=1} */
+#define GPIO_MODER_OFF  0x00U       /* GPIOx_MODER offset */
+#define GPIO_ODR_OFF    0x14U       /* GPIOx_ODR offset */
+#define GPIO_BSRR_OFF   0x18U       /* GPIOx_BSRR offset */
+
+/* Handy register accessors */
+#define GPIOB_MODER     (*(volatile uint32_t*)(GPIOB_BASE + GPIO_MODER_OFF))
+#define GPIOB_ODR       (*(volatile uint32_t*)(GPIOB_BASE + GPIO_ODR_OFF))
+#define GPIOB_BSRR      (*(volatile uint32_t*)(GPIOB_BASE + GPIO_BSRR_OFF))
+
+/* === Utility Delay === */
+void delay(uint32_t count)
+{
+    for (uint32_t i = 0; i < count; i++);
+}
+
+/* === LED Initialization: set LED1–LED4 pins as push‑pull outputs === */
+void led_init_all(void)
+{
+    /* 1) Enable clock for GPIOB (bit 1 in RCC_AHB1ENR) */
+    RCC_AHB1ENR |= (1U << 1U);  /* Enable GPIOB bus clock :contentReference[oaicite:2]{index=2} */
+
+    /* 2) Configure each LED pin as general‑purpose output (MODER = 01) */
+    for (uint8_t pin = LED1; pin <= LED4; pin++) {
+        /* Clear the two mode bits for this pin */
+        GPIOB_MODER &= ~(0x3U << (pin * 2U));
+        /* Set mode = 01 → General purpose output */
+        GPIOB_MODER |=  (0x1U << (pin * 2U));
+    }
+
+    /* 3) Ensure all LEDs start off (ODR = 0) */
+    GPIOB_ODR &= ~((1U << LED1) |
+                   (1U << LED2) |
+                   (1U << LED3) |
+                   (1U << LED4));
+}
+
+/* === Turn one LED on by setting its bit in BSRR === */
+void led_on(uint8_t led_no)
+{
+    GPIOB_BSRR = (1U << led_no);    /* Writing 1 here sets pin high :contentReference[oaicite:3]{index=3} */
+}
+
+/* === Turn one LED off by resetting its bit via the upper half of BSRR === */
+void led_off(uint8_t led_no)
+{
+    GPIOB_BSRR = (1U << (led_no + 16U));  /* Writing 1 here resets pin low :contentReference[oaicite:4]{index=4} */
+}

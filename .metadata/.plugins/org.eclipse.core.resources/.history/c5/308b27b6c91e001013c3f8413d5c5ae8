@@ -1,0 +1,44 @@
+
+#include<stdint.h>
+#include "led.h"
+
+
+
+void delay(uint32_t count)
+{
+  for(uint32_t i = 0 ; i < count ; i++);
+}
+
+void led_init_all(void)
+{
+
+	uint32_t *pRccAhb1enr = (uint32_t*) (0x40023800 + 0x30);
+	uint32_t *pGpioAMode = (uint32_t*)0x40020000;
+
+	*pRccAhb1enr |= ( 1 << 0);
+
+	for(uint8_t pin = LED1; pin <= LED4; pin++){
+		*pGpioAMode &= ~(0x3 << (pin * 2)); // 1st clearing every bit
+
+		*pGpioAMode |= (0x1 << (pin * 2));
+	}
+
+	uint32_t *pGpioB_odr = (uint32_t*) 0x40020014;
+	*pGpioB_odr &= ~((1 << LED1) | (1 << LED2) | (1 << LED3) | (1 << LED4));
+
+
+}
+
+void led_on(uint8_t led_no)
+{
+  uint32_t *pGpioB_BSRR = (uint32_t*)0x40010810;
+  *pGpioB_BSRR |= ( 1 << led_no);
+
+}
+
+void led_off(uint8_t led_no)
+{
+	uint32_t *pGpioB_BSRR = (uint32_t*)0x40010810;
+	*pGpioB_BSRR |= ( 1 << (16 + led_no));
+}
+

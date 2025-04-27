@@ -1,0 +1,176 @@
+
+led.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <delay>:
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	2300      	movs	r3, #0
+   a:	60fb      	str	r3, [r7, #12]
+   c:	e002      	b.n	14 <delay+0x14>
+   e:	68fb      	ldr	r3, [r7, #12]
+  10:	3301      	adds	r3, #1
+  12:	60fb      	str	r3, [r7, #12]
+  14:	68fa      	ldr	r2, [r7, #12]
+  16:	687b      	ldr	r3, [r7, #4]
+  18:	429a      	cmp	r2, r3
+  1a:	d3f8      	bcc.n	e <delay+0xe>
+  1c:	bf00      	nop
+  1e:	bf00      	nop
+  20:	3714      	adds	r7, #20
+  22:	46bd      	mov	sp, r7
+  24:	bc80      	pop	{r7}
+  26:	4770      	bx	lr
+
+00000028 <led_init_all>:
+  28:	b480      	push	{r7}
+  2a:	b085      	sub	sp, #20
+  2c:	af00      	add	r7, sp, #0
+  2e:	4b23      	ldr	r3, [pc, #140]	@ (bc <led_init_all+0x94>)
+  30:	60fb      	str	r3, [r7, #12]
+  32:	4b23      	ldr	r3, [pc, #140]	@ (c0 <led_init_all+0x98>)
+  34:	60bb      	str	r3, [r7, #8]
+  36:	68fb      	ldr	r3, [r7, #12]
+  38:	681b      	ldr	r3, [r3, #0]
+  3a:	f043 0204 	orr.w	r2, r3, #4
+  3e:	68fb      	ldr	r3, [r7, #12]
+  40:	601a      	str	r2, [r3, #0]
+  42:	68bb      	ldr	r3, [r7, #8]
+  44:	681b      	ldr	r3, [r3, #0]
+  46:	f023 02f0 	bic.w	r2, r3, #240	@ 0xf0
+  4a:	68bb      	ldr	r3, [r7, #8]
+  4c:	601a      	str	r2, [r3, #0]
+  4e:	68bb      	ldr	r3, [r7, #8]
+  50:	681b      	ldr	r3, [r3, #0]
+  52:	f043 0210 	orr.w	r2, r3, #16
+  56:	68bb      	ldr	r3, [r7, #8]
+  58:	601a      	str	r2, [r3, #0]
+  5a:	68bb      	ldr	r3, [r7, #8]
+  5c:	681b      	ldr	r3, [r3, #0]
+  5e:	f423 6270 	bic.w	r2, r3, #3840	@ 0xf00
+  62:	68bb      	ldr	r3, [r7, #8]
+  64:	601a      	str	r2, [r3, #0]
+  66:	68bb      	ldr	r3, [r7, #8]
+  68:	681b      	ldr	r3, [r3, #0]
+  6a:	f443 7280 	orr.w	r2, r3, #256	@ 0x100
+  6e:	68bb      	ldr	r3, [r7, #8]
+  70:	601a      	str	r2, [r3, #0]
+  72:	68bb      	ldr	r3, [r7, #8]
+  74:	681b      	ldr	r3, [r3, #0]
+  76:	f423 4270 	bic.w	r2, r3, #61440	@ 0xf000
+  7a:	68bb      	ldr	r3, [r7, #8]
+  7c:	601a      	str	r2, [r3, #0]
+  7e:	68bb      	ldr	r3, [r7, #8]
+  80:	681b      	ldr	r3, [r3, #0]
+  82:	f443 5280 	orr.w	r2, r3, #4096	@ 0x1000
+  86:	68bb      	ldr	r3, [r7, #8]
+  88:	601a      	str	r2, [r3, #0]
+  8a:	68bb      	ldr	r3, [r7, #8]
+  8c:	681b      	ldr	r3, [r3, #0]
+  8e:	f423 2270 	bic.w	r2, r3, #983040	@ 0xf0000
+  92:	68bb      	ldr	r3, [r7, #8]
+  94:	601a      	str	r2, [r3, #0]
+  96:	68bb      	ldr	r3, [r7, #8]
+  98:	681b      	ldr	r3, [r3, #0]
+  9a:	f443 3280 	orr.w	r2, r3, #65536	@ 0x10000
+  9e:	68bb      	ldr	r3, [r7, #8]
+  a0:	601a      	str	r2, [r3, #0]
+  a2:	4b08      	ldr	r3, [pc, #32]	@ (c4 <led_init_all+0x9c>)
+  a4:	607b      	str	r3, [r7, #4]
+  a6:	687b      	ldr	r3, [r7, #4]
+  a8:	681b      	ldr	r3, [r3, #0]
+  aa:	f023 021e 	bic.w	r2, r3, #30
+  ae:	687b      	ldr	r3, [r7, #4]
+  b0:	601a      	str	r2, [r3, #0]
+  b2:	bf00      	nop
+  b4:	3714      	adds	r7, #20
+  b6:	46bd      	mov	sp, r7
+  b8:	bc80      	pop	{r7}
+  ba:	4770      	bx	lr
+  bc:	40021018 	andmi	r1, r2, r8, lsl r0
+  c0:	40010800 	andmi	r0, r1, r0, lsl #16
+  c4:	4001080c 	andmi	r0, r1, ip, lsl #16
+
+000000c8 <led_on>:
+  c8:	b480      	push	{r7}
+  ca:	b085      	sub	sp, #20
+  cc:	af00      	add	r7, sp, #0
+  ce:	4603      	mov	r3, r0
+  d0:	71fb      	strb	r3, [r7, #7]
+  d2:	4b08      	ldr	r3, [pc, #32]	@ (f4 <led_on+0x2c>)
+  d4:	60fb      	str	r3, [r7, #12]
+  d6:	68fb      	ldr	r3, [r7, #12]
+  d8:	681b      	ldr	r3, [r3, #0]
+  da:	79fa      	ldrb	r2, [r7, #7]
+  dc:	2101      	movs	r1, #1
+  de:	fa01 f202 	lsl.w	r2, r1, r2
+  e2:	431a      	orrs	r2, r3
+  e4:	68fb      	ldr	r3, [r7, #12]
+  e6:	601a      	str	r2, [r3, #0]
+  e8:	bf00      	nop
+  ea:	3714      	adds	r7, #20
+  ec:	46bd      	mov	sp, r7
+  ee:	bc80      	pop	{r7}
+  f0:	4770      	bx	lr
+  f2:	bf00      	nop
+  f4:	40010810 	andmi	r0, r1, r0, lsl r8
+
+000000f8 <led_off>:
+  f8:	b480      	push	{r7}
+  fa:	b085      	sub	sp, #20
+  fc:	af00      	add	r7, sp, #0
+  fe:	4603      	mov	r3, r0
+ 100:	71fb      	strb	r3, [r7, #7]
+ 102:	4b08      	ldr	r3, [pc, #32]	@ (124 <led_off+0x2c>)
+ 104:	60fb      	str	r3, [r7, #12]
+ 106:	68fb      	ldr	r3, [r7, #12]
+ 108:	681b      	ldr	r3, [r3, #0]
+ 10a:	79fa      	ldrb	r2, [r7, #7]
+ 10c:	3210      	adds	r2, #16
+ 10e:	2101      	movs	r1, #1
+ 110:	fa01 f202 	lsl.w	r2, r1, r2
+ 114:	431a      	orrs	r2, r3
+ 116:	68fb      	ldr	r3, [r7, #12]
+ 118:	601a      	str	r2, [r3, #0]
+ 11a:	bf00      	nop
+ 11c:	3714      	adds	r7, #20
+ 11e:	46bd      	mov	sp, r7
+ 120:	bc80      	pop	{r7}
+ 122:	4770      	bx	lr
+ 124:	40010810 	andmi	r0, r1, r0, lsl r8
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	@ 0x3700
+   4:	3128203a 			@ <UNDEFINED> instruction: 0x3128203a
+   8:	33313a35 	teqcc	r1, #217088	@ 0x35000
+   c:	722e322e 	eorvc	r3, lr, #-536870910	@ 0xe0000002
+  10:	2d316c65 	ldccs	12, cr6, [r1, #-404]!	@ 0xfffffe6c
+  14:	31202932 			@ <UNDEFINED> instruction: 0x31202932
+  18:	2e322e33 	mrccs	14, 1, r2, cr2, cr3, {1}
+  1c:	30322031 	eorscc	r2, r2, r1, lsr r0
+  20:	30313332 	eorscc	r3, r1, r2, lsr r3
+  24:	Address 0x24 is out of bounds.
+
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002c41 	andeq	r2, r0, r1, asr #24
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000022 	andeq	r0, r0, r2, lsr #32
+  10:	4d2d3705 	stcmi	7, cr3, [sp, #-20]!	@ 0xffffffec
+  14:	070a0600 	streq	r0, [sl, -r0, lsl #12]
+  18:	1202094d 	andne	r0, r2, #1261568	@ 0x134000
+  1c:	15011404 	strne	r1, [r1, #-1028]	@ 0xfffffbfc
+  20:	18031701 	stmdane	r3, {r0, r8, r9, sl, ip}
+  24:	1a011901 	bne	46430 <led_off+0x46338>
+  28:	22061e01 	andcs	r1, r6, #1, 28
+  2c:	Address 0x2c is out of bounds.
+
