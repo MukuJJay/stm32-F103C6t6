@@ -3,6 +3,8 @@
 #include "main.h"
 #include "led.h"
 
+extern void initialise_monitor_handles(void);
+
 void idle_task(void);
 void task1_handler(void);
 void task2_handler(void);
@@ -43,6 +45,8 @@ int main(void)
 {
 	enable_processor_faults();
 
+	initialise_monitor_handles();
+
 	printf("This is an implementation of task scheduler.\n");
 
 	sched_stack_init(SCHED_STACK_START);
@@ -69,6 +73,7 @@ void idle_task(void)
 
 void task1_handler(void){
 	while(1){
+		printf("TASK_1\n");
 		led_on(LED1);
 		task_delay(1000);
 		led_off(LED1);
@@ -78,6 +83,7 @@ void task1_handler(void){
 
 void task2_handler(void){
 	while(1){
+		printf("TASK_2\n");
 		led_on(LED2);
 		task_delay(500);
 		led_off(LED2);
@@ -87,6 +93,7 @@ void task2_handler(void){
 
 void task3_handler(void){
 	while(1){
+		printf("TASK_3\n");
 		led_on(LED3);
 		task_delay(250);
 		led_off(LED3);
@@ -96,6 +103,7 @@ void task3_handler(void){
 
 void task4_handler(void){
 	while(1){
+		printf("TASK_4\n");
 		led_on(LED4);
 		task_delay(125);
 		led_off(LED4);
