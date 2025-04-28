@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 #include "main.h"
 #include "led.h"
 
@@ -41,6 +42,8 @@ volatile TCB_t userTasks[MAX_TASKS];
 int main(void)
 {
 	enable_processor_faults();
+
+	printf("This is an implementation of task scheduler.\n");
 
 	sched_stack_init(SCHED_STACK_START);
 

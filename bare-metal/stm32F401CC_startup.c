@@ -7,7 +7,15 @@
 
 #define STACK_START SRAM_END
 
+extern uint32_t _etxt;
+extern uint32_t _sdata;
+extern uint32_t _edata;
+extern uint32_t _sbss;
+extern uint32_t _ebss;
+extern uint32_t _la_data;
+
 int main(void);
+void __libc_init_array(void);
 /* Cortex‑M4 core handlers */
 void     Reset_Handler           (void);
 void     NMI_Handler             (void) __attribute__((weak, alias("Default_Handler")));
@@ -78,11 +86,6 @@ void     I2C3_ER_IRQHandler             (void) __attribute__((weak, alias("Defau
 void     FPU_IRQHandler                 (void) __attribute__((weak, alias("Default_Handler")));
 void     SPI4_IRQHandler                (void) __attribute__((weak, alias("Default_Handler")));
 
-extern uint32_t _etxt;
-extern uint32_t _sdata;
-extern uint32_t _edata;
-extern uint32_t _sbss;
-extern uint32_t _ebss;
 
 /* Default infinite‑loop exception */
 void Default_Handler(void)
@@ -91,27 +94,29 @@ void Default_Handler(void)
 }
 
 /* Reset handler stub */
-void Reset_Handler(void)
-{
-    //copy .data from flash to sram
-    uint32_t size = &_edata - &_sdata;
+    void Reset_Handler(void)
+    {
+        //copy .data from flash to sram
+        uint32_t size = (uint32_t)&_edata - (uint32_t)&_sdata;
 
-    uint8_t* pSrc = (uint8_t*) &_etxt;
-    uint8_t* pDst = (uint8_t*) &_sdata;
+        uint8_t* pSrc = (uint8_t*) &_la_data;
+        uint8_t* pDst = (uint8_t*) &_sdata;
 
-    for(int i = 0 ; i < size; i++){
-        *pDst++ = *pSrc++;
+        for(int i = 0 ; i < size; i++){
+            *pDst++ = *pSrc++;
+        }
+
+        //initializing the bss section
+        size = (uint32_t) &_ebss - (uint32_t) &_sbss;
+        pDst = (uint8_t*) &_sbss;
+        for(int i = 0 ; i < size; i++){
+            *pDst++ = 0;
+        }
+
+        __libc_init_array();
+
+    main(); //calling the main function
     }
-
-    //initializing the bss section
-    size = &_ebss - &_sbss;
-    pDst = (uint8_t*) &_sbss;
-    for(int i = 0 ; i < size; i++){
-        *pDst++ = 0;
-    }
-
-   main(); //calling the main function
-}
 
 /* The full vector table, in the exact order of RM0368 “Table 38” */
 
