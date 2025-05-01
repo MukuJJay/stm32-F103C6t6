@@ -33,7 +33,7 @@ load:
 	openocd -f /usr/share/openocd/scripts/interface/stlink.cfg -f /usr/share/openocd/scripts/target/stm32f4x.cfg
 
 gdb:
-	gdb-multiarch ./final.elf
+	gdb ./final.elf
 
 gdb_sh:
-	gdb-multiarch ./final_sh.elf
+	gdb ./final_sh.elf
