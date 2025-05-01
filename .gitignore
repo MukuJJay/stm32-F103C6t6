@@ -2,6 +2,7 @@
 *.elf 
 *.map
 
+.settings/
 debug/
 core/
 drivers/
